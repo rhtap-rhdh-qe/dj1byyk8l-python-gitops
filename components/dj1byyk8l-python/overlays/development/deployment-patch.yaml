@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
-metadata:   
-  annotations:  
+metadata:
+  annotations:
     tad.gitops.set/image: ".spec.template.spec.containers[0].image"
     tad.gitops.get/image: ".spec.template.spec.containers[0].image"
     tad.gitops.set/replicas: ".spec.replicas"
-    tad.gitops.get/replicas: ".spec.replicas" 
+    tad.gitops.get/replicas: ".spec.replicas"
   name: dj1byyk8l-python
 spec:
-  replicas: 1 
-  template: 
+  replicas: 1
+  template:
     spec:
       containers:
-      - image: quay.io/redhat-appstudio/dance-bootstrap-app:latest
-        name: container-image  
+        - image: rhtap-quay-quay-rhtap-quay.apps.00827cfd-096b-4e7e-8dd8-8a079b55128f.prod.konfluxeaas.com/rhtap/rhtap-qe-python:03599479d20464d1089a895d48754af20dde3cf1@sha256:26ed5f43213198cc58c412dde0b686bf04a43133dbce66b2d691e1e0b0aef1f5
+          name: container-image
