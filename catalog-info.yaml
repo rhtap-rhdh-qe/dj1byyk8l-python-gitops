@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: dj1byyk8l-python-gitops
+  description: This is GitOps manifest for dj1byyk8l-python   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-selector: rhtap/gitops=dj1byyk8l-python
+    backstage.io/kubernetes-id: dj1byyk8l-python 
+    backstage.io/techdocs-ref: dir:. 
+    janus-idp.io/tekton: dj1byyk8l-python   
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:dj1byyk8l-python
